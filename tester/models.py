@@ -9,3 +9,4 @@ class User(models.Model):
         size=5
     )
     pointNumbers = models.JSONField()
+    numberArrays = models.JSONField()

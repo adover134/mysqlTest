@@ -9,7 +9,13 @@ class UserSerializer(serializers.ModelSerializer):
     pointNumbers = serializers.ListField(
         child=serializers.IntegerField()
     )
+    numberArrays = serializers.ListField(
+        child=serializers.ListField(
+            child=serializers.IntegerField()
+        )
+    )
+
     class Meta:
         model = User
         # fields = '__all__'
-        fields = ["name", "childrenNames", "pointNumbers"]
+        fields = ["name", "childrenNames", "pointNumbers", "numberArrays"]
